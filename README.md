@@ -68,10 +68,13 @@ Colab version will be added.
 Download the resulting model [here][1].
 
 You can see the results for the trained model.
+
 Loss:
+
 <img src="https://github.com/nuwandda/Clean-Littered-Road-Classification/blob/main/outputs/loss_pretrained_True.png" width="500" height="400">
 
 Accuracy:
+
 <img src="https://github.com/nuwandda/Clean-Littered-Road-Classification/blob/main/outputs/accuracy_pretrained_True.png" width="500" height="400">
 
 [1]: https://drive.google.com/file/d/1wdNtJza-zInFG4iNFIN07CePNRBULOXd/view?usp=sharing
