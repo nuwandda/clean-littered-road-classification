@@ -22,7 +22,8 @@ The dataset contains images of clean and dirty road.
 There are a total of 237 images, all of which bootstraped from the internet. The task is to create a classification model, which can accurately classify if a road is clean or littered. Because of the lack of data, pretrained models and data augmentation may be used.
 
 Such a classification model can be used to develope applications to detect littered part of roads using cameras and send necessary service to those areas.
-Naviagate Dataset:
+
+Navigate Dataset:
 
     Images: Folder containing all the road images.
     metadata.csv: A csv file mapping the image name with the class label.
@@ -35,9 +36,9 @@ Instructions on setting up your project locally.
 To get a local copy up and running follow these simple steps.
 
 ### Install dependencies
-To install the required packages. In a terminal, type:
+To install the required packages, in a terminal, type:
   ```sh
-  pip install -r src/requirements.txt
+  pip install -r requirements.txt
   ```
 
 ### Download dataset
