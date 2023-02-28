@@ -1,0 +1,7 @@
+tqdm
+split-folders[full]
+kaggle
+torch
+torchvision
+matplotlib
+opencv-python
