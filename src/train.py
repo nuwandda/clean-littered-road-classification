@@ -40,16 +40,21 @@ def train(model, trainloader, optimizer, criterion):
         image = image.to(device)
         labels = labels.to(device)
         optimizer.zero_grad()
+
         # Forward pass.
         outputs = model(image)
+
         # Calculate the loss.
         loss = criterion(outputs, labels)
         train_running_loss += loss.item()
+
         # Calculate the accuracy.
         _, preds = torch.max(outputs.data, 1)
         train_running_correct += (preds == labels).sum().item()
+
         # Backpropagation
         loss.backward()
+
         # Update the weights.
         optimizer.step()
 
@@ -74,11 +79,14 @@ def validate(model, testloader, criterion):
             image, labels = data
             image = image.to(device)
             labels = labels.to(device)
+
             # Forward pass.
             outputs = model(image)
+
             # Calculate the loss.
             loss = criterion(outputs, labels)
             valid_running_loss += loss.item()
+
             # Calculate the accuracy.
             _, preds = torch.max(outputs.data, 1)
             valid_running_correct += (preds == labels).sum().item()
@@ -98,6 +106,7 @@ if __name__ == '__main__':
     print(f"[INFO]: Class names: {dataset_classes}\n")
     # Load the training and validation data loaders.
     train_loader, valid_loader = get_data_loaders(dataset_train, dataset_valid)
+
     # Learning_parameters.
     lr = args['learning_rate']
     epochs = args['epochs']
@@ -114,16 +123,22 @@ if __name__ == '__main__':
     # Total parameters and trainable parameters.
     total_params = sum(p.numel() for p in model.parameters())
     print(f"{total_params:,} total parameters.")
+
     total_trainable_params = sum(
         p.numel() for p in model.parameters() if p.requires_grad)
+
     print(f"{total_trainable_params:,} training parameters.")
+
     # Optimizer.
     optimizer = optim.Adam(model.parameters(), lr=lr)
+
     # Loss function.
     criterion = nn.CrossEntropyLoss()
+
     # Lists to keep track of losses and accuracies.
     train_loss, valid_loss = [], []
     train_acc, valid_acc = [], []
+
     # Start the training.
     for epoch in range(epochs):
         print(f"[INFO]: Epoch {epoch + 1} of {epochs}")

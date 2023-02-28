@@ -65,10 +65,13 @@ def get_datasets(pretrained):
         transform=(get_valid_transform(IMAGE_SIZE, pretrained))
     )
     dataset_size = len(dataset)
+
     # Calculate the validation dataset size.
     valid_size = int(VALID_SPLIT * dataset_size)
+
     # Randomize the data indices.
     indices = torch.randperm(len(dataset)).tolist()
+
     # Training and validation sets.
     dataset_train = Subset(dataset, indices[:-valid_size])
     dataset_valid = Subset(dataset_test, indices[-valid_size:])
