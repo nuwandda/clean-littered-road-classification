@@ -1,4 +1,4 @@
-# Clean Littered Road Classification
+# Clean Littered Road Classification - EfficientNet
 <a name="readme-top"></a>
 
 <!-- ABOUT THE PROJECT -->
