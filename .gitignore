@@ -1,3 +1,4 @@
 /outputs/model_pretrained_True.pth
 env
 .idea
+__pycache__
