@@ -36,28 +36,28 @@ Instructions on setting up your project locally.
 To get a local copy up and running follow these simple steps.
 
 ### Install dependencies
-To install the required packages. In a terminal, type:
+To install the required packages, in a terminal, type:
   ```sh
-  pip install -r src/requirements.txt
+  pip install -r requirements.txt
   ```
 
 ### Download dataset
 To download the dataset, run **prepare_data.py**. You need to create an API key for Kaggle. 
   ```sh
-  python src/prepare_data.py --username username --key api_key
+  python prepare_data.py --username username --key api_key
   ```
 It will be downloaded inside to **data** folder.
 
 ### Training
 
   ```sh
-  python src/train.py --epochs 50 --learning-rate 0.001 --pretrained
+  python train.py --epochs 50 --learning-rate 0.001 --pretrained
   ```
 
 ### Inference
 In order to test the trained model, we will use the image in the **test_images** folder. To test the trained model:
   ```sh
-  python src/inference.py
+  python inference.py
   ```
 
 Colab version will be added.
